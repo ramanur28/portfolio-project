@@ -1,0 +1,74 @@
+.jumbotron {
+  background-color: #000000a2;
+  height: 80vh;
+  color: var(--light);
+  font-family: "Alegreya";
+  padding: 50px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.jumbotron .title {
+  font-size: 36px;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.jumbotron .title,
+.jumbotron .lead {
+  position: relative;
+  z-index: 10;
+  width: fit-content;
+}
+
+.jumbotron .lead {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148.687%;
+}
+
+.jumbotron .video {
+  position: absolute;
+  z-index: -1;
+  height: 85vh;
+  top: 0;
+  left: 0;
+}
+
+/* hide info in phone */
+.info {
+  display: block;
+  position: relative;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 576px) {
+  .jumbotron .title,
+  .jumbotron .lead {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .jumbotron {
+    height: 100vh;
+  }
+
+  .jumbotron .title {
+    font-size: 65px;
+  }
+
+  .video {
+    width: 100vw !important;
+    height: auto !important;
+  }
+}

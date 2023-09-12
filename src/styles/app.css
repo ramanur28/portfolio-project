@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --black: #000;
+  --white: #8c8c8c;
+  --grey: #333333;
+  --light: #fff;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.cursor {
+  display: none;
+}
+
+.cursor {
+  clip-path: circle(20px at 25px 25px);
+  background-image: url("../assets/moon.png");
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cursor {
+    display: block !important;
+  }
+}
