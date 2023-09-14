@@ -7,6 +7,10 @@ import About from "./components/About";
 
 import { useContext, useState, useEffect } from "react";
 import { mouseContext } from "./components/cursor/mouseContext";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contacts from "./components/Contacts";
+import Closing from "./components/Closing";
 
 function App() {
   const { x, y } = useContext(mouseContext);
@@ -23,10 +27,14 @@ function App() {
   return (
     <>
       <Loader />
-      <Cursor mousePos={{ x, y }} />
+      {/* <Cursor mousePos={{ x, y }} /> */}
       <Navbar />
       <Jumbotron />
       <About />
+      <Projects />
+      <Skills />
+      <Contacts />
+      <Closing />
     </>
   );
 }

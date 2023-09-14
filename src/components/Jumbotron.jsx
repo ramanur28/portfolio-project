@@ -1,44 +1,51 @@
 import "../styles/jumbotron.css";
 import video from "../assets/planet.mp4";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { mouseContext } from "./cursor/mouseContext";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Jumbotron = () => {
+  const jumbotronRef = useRef(null);
   const { setHover, isHover, x, y } = useContext(mouseContext);
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target: jumbotronRef,
+    offset: ["end end", "end start"],
+  });
   const vidScale = useTransform(scrollYProgress, [0, 1], ["1", "2"]);
+  const jumbotronTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", "100%"]
+  );
 
   return (
-    <div className="jumbotron" id="home">
+    <motion.div
+      ref={jumbotronRef}
+      className="jumbotron"
+      id="home"
+      style={{
+        y: jumbotronTransform,
+      }}
+      transition={{ ease: "linear" }}
+    >
       <motion.h1
         className="title"
-        onMouseEnter={() => {
-          setHover(true);
-        }}
-        onMouseLeave={() => {
-          setHover(false);
-        }}
         animate={{ x: x / 50, y: y / 50 }}
-        transition={{ type: "ease", duration: 0.7 }}
+        transition={{ duration: 0.7 }}
       >
         Ramadhani
       </motion.h1>
       <motion.p
         animate={{ x: x / 40, y: y / 40 }}
-        transition={{ type: "ease", duration: 0.4 }}
+        transition={{ duration: 0.4 }}
         className="lead"
-        onMouseEnter={() => {
-          setHover(true);
-        }}
-        onMouseLeave={() => {
-          setHover(false);
-        }}
       >
         POURING HEART, SOUL, AND CODE INTO A WEBSITE
       </motion.p>
       <motion.video
-        style={{ scale: vidScale }}
+        style={{
+          scale: vidScale,
+        }}
         className="video "
         autoPlay
         loop
@@ -46,7 +53,7 @@ const Jumbotron = () => {
       >
         <source src={video} type="video/mp4" />
       </motion.video>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,8 @@
-# React + Vite
+# portfolio project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# using
 
-Currently, two official plugins are available:
+1. react + vite
+2. framer-motion + bootstrap
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+the reason i implementing bootstrap is because they have a lot of setup style that made my project easy to style, and its light too.

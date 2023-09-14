@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Roboto:wght@400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Roboto:wght@400;500;700&display=swap");
 :root {
   --black: #000;
   --white: #8c8c8c;
@@ -8,7 +7,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -25,6 +24,13 @@ body {
   height: 50px;
   position: fixed;
   z-index: 1;
+}
+
+.subtitle {
+  font-size: 66px;
+  font-family: "Alegreya";
+  font-weight: 500;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1024px) {

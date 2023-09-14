@@ -1,0 +1,23 @@
+.closing-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--grey);
+  display: flex;
+  align-items: center;
+}
+
+.closing-text {
+  color: var(--light);
+  text-align: center;
+  font-family: "Alegreya";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media only screen and (min-width: 1024px) {
+  .closing-text {
+    font-size: 96px;
+  }
+}
