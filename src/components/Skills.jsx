@@ -100,14 +100,16 @@ const Skills = () => {
     return (
       <motion.div ref={skillsRef} className="skills-container">
         <h2 className="subtitle">Skills</h2>
-        <div className="skills-wrapper">{renderSkill}</div>
-        <motion.div className="skills-content" style={{ top: contentMoveLg }}>
-          <p className="skills-text">
-            My journey in programming has been a pursuit of constant growth, and
-            my mission is crystal clear: to evolve into a better programmer with
-            each passing day.
-          </p>
-        </motion.div>
+        <div className="skills-scroller">
+          <motion.div className="skills-content">
+            <p className="skills-text">
+              My journey in programming has been a pursuit of constant growth,
+              and my mission is crystal clear: to evolve into a better
+              programmer with each passing day.
+            </p>
+          </motion.div>
+          <div className="skills-wrapper">{renderSkill}</div>
+        </div>
       </motion.div>
     );
   }

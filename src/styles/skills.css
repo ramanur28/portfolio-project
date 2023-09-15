@@ -38,7 +38,7 @@
 .skills-content {
   height: 100vh;
   background-color: var(--white);
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   padding: 20px;
@@ -57,14 +57,21 @@
   height: fit-content;
 }
 
+.skills-scroller {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
 @media only screen and (min-width: 1024px) {
   .skills-content {
     width: 75vw;
+    padding: 50px;
   }
 
   .skills-wrapper {
     width: 25vw;
-    margin-left: 74vw;
+    box-sizing: border-box;
   }
 
   .skills-container h2 {

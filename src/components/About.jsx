@@ -13,7 +13,6 @@ const About = () => {
     onScreen: {
       x: 0,
       transition: {
-        delay: 0.3,
         ease: "easeInOut",
         duration: 1,
         delayChildren: 0.5,
